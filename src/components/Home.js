@@ -1,4 +1,5 @@
 import React from 'react'
+import { Spring } from "react-spring";
 import './Home.css';
 import {DesplegarInfo} from './Info'
 import { Jumbotron, ListGroup, Image, Container, Row, Col, Carousel, Button } from 'react-bootstrap'
@@ -12,20 +13,30 @@ import dance from "../images/dance.gif"
 
 export const Home = () => {
     return (
-        <div className="container-fluid mt-2">
+        <Spring 
+        from={{ opacity: 0, marginTop: -500 }}
+        to={{ opacity: 1, marginTop: 0 }}
+        >
+            { props => (
+            <div style={props}>
+                 <div className="container-fluid mt-2">
 
-            <Jumbotron className="bg-warning text-center">
+                    <Jumbotron className="bg-warning text-center">
+                        <div>
+                             <Image src={starwars} className="image" />
+                            <h1>Hello, I'm Oscar</h1>
+                            <p>
+                             I am a Jr.Full-stack web developer who loves to learn and create websites using the imagination and tools like React, always trying to do more to learn more.
+                            </p> 
+                         </div>
 
-                <Image src={starwars} className="image" />
-                <h1>Hello, I'm Oscar</h1>
-                <p>
-                    I am a Jr.Full-stack web developer who loves to learn and create websites using the imagination and tools like React, always trying to do more to learn more.
-                </p>
+                    </Jumbotron>
 
-
-            </Jumbotron>
-
-        </div>
+                </div>
+            </div>
+            )}
+        </Spring>
+            
     )
 }
 
