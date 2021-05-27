@@ -1,8 +1,9 @@
-import React from 'react'
-import { Spring } from "react-spring";
+import React, { useEffect } from 'react'
+import Aos from 'aos'
+import "aos/dist/aos.css"
 import './Home.css';
 import {DesplegarInfo} from './Info'
-import { Jumbotron, ListGroup, Image, Container, Row, Col, Carousel, Button } from 'react-bootstrap'
+import { Jumbotron, Image, Container, Row, Col, Carousel, Button } from 'react-bootstrap'
 import starwars from "../images/Star-Wars.jpg"
 import starwars1 from "../images/Star-Wars1.png"
 import starwars2 from "../images/Star-Wars2.png"
@@ -10,70 +11,82 @@ import ghibli1 from "../images/ghibli1.png"
 import ghibli2 from "../images/ghibli2.png"
 import ghibli3 from "../images/ghibli3.png"
 import dance from "../images/dance.gif"
+import kylo from "../images/kaaa.jpg"
 
 export const Home = () => {
+    useEffect(() => {
+        Aos.init({duration: 2000})
+    }, [])
     return (
-        <Spring 
-        from={{ opacity: 0, marginTop: -500 }}
-        to={{ opacity: 1, marginTop: 0 }}
-        >
-            { props => (
-            <div style={props}>
-                 <div className="container-fluid mt-2">
-
-                    <Jumbotron className="bg-warning text-center">
-                        <div>
-                             <Image src={starwars} className="image" />
-                            <h1>Hello, I'm Oscar</h1>
-                            <p>
-                             I am a Jr.Full-stack web developer who loves to learn and create websites using the imagination and tools like React, always trying to do more to learn more.
-                            </p> 
-                         </div>
-
-                    </Jumbotron>
-
+        
+        <div className="container-fluid mt-2">
+            <div className="row">
+                <div className="col-md">
+                    <Image src={starwars} className="image" />
                 </div>
-            </div>
-            )}
-        </Spring>
-            
+                <div className="col-md" data-aos="slide-left">
+                <Jumbotron className="bg-warning text-center">
+                    <div>                            
+                        <h1>Hello, I'm Oscar</h1>
+                        <p>
+                         I am a Jr.Full-stack web developer who loves to learn and create websites using the imagination and tools like React, always trying to do more to learn more.
+                        </p> 
+                    </div>
+
+                </Jumbotron>
+                </div>
+                
+            </div>                  
+        </div>
     )
 }
 
 export const Description = () => {
     return (
+        <Container fluid>
+            <Row>
+                <Col>
+                
+                    <div className="aba bg-warning" data-aos="slide-right">
+                        
+                           <h1 className="text-black text-center"><img src="https://img.icons8.com/ios-filled/50/000000/super-mario.png" alt="" /> About <img src="https://img.icons8.com/dotty/50/000000/sonic-the-hedgehog-1.png" alt="" /></h1>
+                        <div className="d-flex justify-content-center">
+                             <ul>
+                             <li>I like to play videogames, watch anime and some series.</li>
+                             <li>Learn new things about technology and programming.</li>
+                             <li>Listen to music.</li>
+                            </ul>
+                        </div> 
+                        
+                        
+                    </div>
+                </Col>
+                
+                    <Col>
+                    <div className="text-center">
+                       <Image src={kylo} className="image2"/> 
+                    </div>
+                
+                </Col> 
+               
+               
+               
+            </Row>
 
-        <div className="container-fluid">
-            <Jumbotron className="bg-warning text-center ">
+        </Container>
 
-                <h1><img src="https://img.icons8.com/ios-filled/50/000000/super-mario.png" alt="" /> About <img src="https://img.icons8.com/dotty/50/000000/sonic-the-hedgehog-1.png" alt="" /></h1>
-                <div className="d-flex justify-content-center">
-                    <ListGroup as="ul" className="list d-flex justify-content-center">
-                        <ListGroup.Item as="li" active className="bg-dark mt-2">
-                            Hobbies
-                </ListGroup.Item>
-                        <ListGroup.Item as="li">I like to play videogames, watch anime and some series.</ListGroup.Item>
-                        <ListGroup.Item as="li">
-                            Learn new things about technology and programming.
-                </ListGroup.Item>
-                        <ListGroup.Item as="li" >Listen to music.</ListGroup.Item>
-                    </ListGroup>
-                </div>
-
-
-            </Jumbotron>
-
-        </div>
+        
 
     )
 }
 export const Projects = () => {
     return (
         <Container fluid>
-            <h1 className="title text-center mb-4">Projects</h1>
+            <h1 className="title text-center mb-4 mt-5">Projects</h1>
             <Row>
 
                 <Col>
+                <div data-aos="fade-right">
                     <Jumbotron className="bg-warning ">
                         <Carousel className="mb-3">
                             <Carousel.Item>
@@ -112,8 +125,13 @@ export const Projects = () => {
                             <Button variant="danger" href="https://ghibli-films-team-4a.herokuapp.com/" >Go to Ghibli's Films</Button>
                         </p>
                     </Jumbotron>
+                </div>
+
+                    
                 </Col>
+                
                 <Col>
+                <div data-aos="fade-left">
                     <Jumbotron className="bg-warning">
                         <Carousel className="mb-3">
 
@@ -149,6 +167,8 @@ export const Projects = () => {
                         </p>
 
                     </Jumbotron>
+                </div>
+                    
 
                 </Col>
             </Row>
@@ -157,8 +177,10 @@ export const Projects = () => {
 
 }
 export const Contact = () => {
+
+    
     return (
-        <Container fluid>
+        <Container fluid data-aos="fade-in">
             <Jumbotron className="text-center bg-warning">
                 <h1>Contact.</h1>
 
