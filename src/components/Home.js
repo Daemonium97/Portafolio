@@ -24,8 +24,8 @@ export const Home = () => {
                 <div className="col-md">
                     <Image src={starwars} className="image" />
                 </div>
-                <div className="col-md" data-aos="slide-left">
-                <Jumbotron className="bg-warning text-center">
+                <div className="col-md" data-aos="slide-left" id="oscar">
+                <Jumbotron className="bg-warning text-center" id="hello">
                     <div>                            
                         <h1>Hello, I'm Oscar</h1>
                         <p>
@@ -45,12 +45,12 @@ export const Description = () => {
     return (
         <Container fluid>
             <Row>
-                <Col>
+                <Col lg={true} id="info">
                 
                     <div className="aba bg-warning" data-aos="slide-right">
                         
-                           <h1 className="text-black text-center"><img src="https://img.icons8.com/ios-filled/50/000000/super-mario.png" alt="" /> About <img src="https://img.icons8.com/dotty/50/000000/sonic-the-hedgehog-1.png" alt="" /></h1>
-                        <div className="d-flex justify-content-center">
+                           <h1 className="text-black text-center" id="about"><img src="https://img.icons8.com/ios-filled/50/000000/super-mario.png" alt="" /> About <img src="https://img.icons8.com/dotty/50/000000/sonic-the-hedgehog-1.png" alt="" /></h1>
+                        <div className="d-flex justify-content-center" id="hoby">
                              <ul>
                              <li>I like to play videogames, watch anime and some series.</li>
                              <li>Learn new things about technology and programming.</li>
@@ -62,7 +62,7 @@ export const Description = () => {
                     </div>
                 </Col>
                 
-                    <Col>
+                    <Col lg={true}>
                     <div className="text-center">
                        <Image src={kylo} className="image2"/> 
                     </div>
@@ -85,7 +85,7 @@ export const Projects = () => {
             <h1 className="title text-center mb-4 mt-5">Projects</h1>
             <Row>
 
-                <Col>
+                <Col lg={true}>
                 <div data-aos="fade-right">
                     <Jumbotron className="bg-warning ">
                         <Carousel className="mb-3">
@@ -122,7 +122,7 @@ export const Projects = () => {
                             
                             </p>
                         <p>
-                            <Button variant="danger" href="https://ghibli-films-team-4a.herokuapp.com/" >Go to Ghibli's Films</Button>
+                            <Button variant="danger" href="https://ghibli-films-team-4a.herokuapp.com/" target="_blank" >Go to Ghibli's Films</Button>
                         </p>
                     </Jumbotron>
                 </div>
@@ -130,7 +130,7 @@ export const Projects = () => {
                     
                 </Col>
                 
-                <Col>
+                <Col lg={true}>
                 <div data-aos="fade-left">
                     <Jumbotron className="bg-warning">
                         <Carousel className="mb-3">
@@ -163,7 +163,7 @@ export const Projects = () => {
                         </p>
                         
                         <p>
-                            <Button variant="danger" href="https://starwars-blog-reading-list.vercel.app/" >Go to Star Wars</Button>
+                            <Button variant="danger" href="https://starwars-blog-reading-list.vercel.app/" target="_blank">Go to Star Wars</Button>
                         </p>
 
                     </Jumbotron>

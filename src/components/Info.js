@@ -26,7 +26,7 @@ export const DesplegarInfo = () => {
 	return (
 		
 			<>
-				<Button variant="danger" onClick={handleShow}>Here</Button>
+				<Button variant="danger" id="darth" onClick={handleShow}>Here</Button>
 
 				<Modal className="text-center" show={show} onHide={handleClose}>
 					<Modal.Header closeButton>
@@ -52,7 +52,7 @@ export const DesplegarInfo = () => {
 								<Form.Control as="textarea" rows={3} placeholder="Type.." name="message" id="areaInput" />
 							</Form.Group>
 
-							<input type="submit" value="Send" />
+							<input type="submit" value="Send" id="send"/>
 						</form>
 					</Modal.Body>
 				</Modal>
