@@ -39,17 +39,17 @@ export const DesplegarInfo = () => {
 
 							<Form.Group>
 								<Form.Label>Your Name</Form.Label>
-								<Form.Control type="text" placeholder="Name..." name="name" id="nameInput" />
+								<Form.Control type="text" placeholder="Name..." name="name" id="nameInput" required autoFocus/>
 							</Form.Group>
 
 							<Form.Group>
 								<Form.Label>Email address</Form.Label>
-								<Form.Control type="email" placeholder="Email..." name="email" id="emailInput" />
+								<Form.Control type="email" placeholder="Email..." name="email" id="emailInput" required/>
 							</Form.Group>
 
 							<Form.Group controlId="exampleForm.ControlTextarea1">
 								<Form.Label>Message</Form.Label>
-								<Form.Control as="textarea" rows={3} placeholder="Type.." name="message" id="areaInput" />
+								<Form.Control as="textarea" rows={3} placeholder="Type.." name="message" id="areaInput" required />
 							</Form.Group>
 
 							<input type="submit" value="Send" id="send"/>

@@ -12,6 +12,9 @@ import ghibli2 from "../images/ghibli2.png"
 import ghibli3 from "../images/ghibli3.png"
 import dance from "../images/dance.gif"
 import kylo from "../images/kaaa.jpg"
+import referral from '../images/referral.png'
+import sports from '../images/sports.png'
+import vipper from '../images/VIPERHEAD.png'
 
 export const Home = () => {
     useEffect(() => {
@@ -23,6 +26,8 @@ export const Home = () => {
             <div className="row">
                 <div className="col-md">
                     <Image src={starwars} className="image" />
+
+
                 </div>
                 <div className="col-md" data-aos="slide-left" id="oscar">
                 <Jumbotron className="bg-warning text-center" id="hello">
@@ -44,6 +49,7 @@ export const Home = () => {
 export const Description = () => {
     return (
         <Container fluid>
+
             <Row>
                 <Col lg={true} id="info">
                 
@@ -75,16 +81,17 @@ export const Description = () => {
 
         </Container>
 
-        
-
     )
 }
 export const Projects = () => {
     return (
-        <Container fluid>
+        <Container fluid >
+            <Row style={{background:'black', justifyContent:'center'}}>
             <h1 className="title text-center mb-4 mt-5">Projects</h1>
-            <Row>
-
+            </Row>
+            
+            <Row >
+                
                 <Col lg={true}>
                 <div data-aos="fade-right">
                     <Jumbotron className="bg-warning ">
@@ -129,6 +136,53 @@ export const Projects = () => {
 
                     
                 </Col>
+
+                <Col lg={true}>
+                <div data-aos="fade-down">
+                    <Jumbotron className="bg-warning ">
+                        <Carousel className="mb-3">
+                            <Carousel.Item>
+                                <img
+                                    className="ghibli d-block w-100"
+                                    src={referral}
+                                    alt="First slide"
+                                />
+
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="ghibli d-block w-100"
+                                    src={sports}
+                                    alt="Second slide"
+                                />
+
+
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="ghibli d-block w-100"
+                                    src={vipper}
+                                    alt="Third slide"
+                                />
+
+
+                            </Carousel.Item>
+                        </Carousel>
+                        <h1>VipperHead</h1>
+                        <p>
+                             A single-page full-responsive website with live chat using React.js.
+                             
+                            
+                        </p>
+                        <stron style={{visibility:'hidden'}}>.</stron>
+                        <p>
+                            <Button variant="danger" href="https://vipper.vercel.app/" target="_blank" >Go to VipperHead</Button>
+                        </p>
+                    </Jumbotron>
+                </div>
+
+                    
+                </Col>
                 
                 <Col lg={true}>
                 <div data-aos="fade-left">
@@ -156,10 +210,10 @@ export const Projects = () => {
                         </Carousel>
                         <h1>Star Wars</h1>
                         <p>
-                           It's a website about characters and places from Star Wars using the Star Wars's SWAPI. 
-                        <p>
-                           <strong>May the force be with you!</strong> 
-                        </p>
+                           It's a website about characters and places from Star Wars using the Star Wars's SWAPI.  
+                        
+                           <strong> May the force be with you!</strong> 
+                        
                         </p>
                         
                         <p>
