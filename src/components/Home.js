@@ -125,7 +125,7 @@ export const Projects = () => {
                         </Carousel>
                         <h1>Ghibli's Films</h1>
                         <p>
-                             Ghibli's Films is website about movies made by Studio Ghibli, you can find information about the films, characters and places.
+                             Ghibli's Films is a website about movies made by Studio Ghibli, you can find information about the films, characters and places.
                             
                             </p>
                         <p>
@@ -210,7 +210,7 @@ export const Projects = () => {
                         </Carousel>
                         <h1>Star Wars</h1>
                         <p>
-                           It's a website about characters and places from Star Wars using the Star Wars's SWAPI.  
+                           A website about characters and places from Star Wars using the Star Wars's SWAPI.  
                         
                            <strong> May the force be with you!</strong> 
                         
