@@ -61,6 +61,7 @@ export const Description = () => {
                              <li>I like to play videogames, watch anime and some series.</li>
                              <li>Learn new things about technology and programming.</li>
                              <li>Listen to music.</li>
+                             <li>Technologies: Node.Js, React.Js, MongoDB, Express.Js.</li>
                             </ul>
                         </div> 
                         
